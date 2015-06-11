@@ -1,0 +1,15 @@
+load sf,sf
+load s0,AA
+;2440
+out s0,0x40
+	in s1, 40
+
+	load s2, BB
+;7fff
+	out s2, ff
+
+	in s3, ff	
+	
+trap:
+	jump trap
+	

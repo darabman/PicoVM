@@ -1,0 +1,48 @@
+load s0,0xAA
+
+; test 01 - va 0x0024--
+out s0,0x48
+
+in s1, 0x48
+
+; test 02
+load s0, 0xBB
+;mmu writes
+out s0, 0x49
+out s0, 0x4A
+out s0, 0x4B
+
+; mmu reads
+in s2, 0x49
+in s3, 0x4a
+in s4, 0x4b
+
+; test 03
+load s5, 0xBB
+;va 0x0025--
+out  s5, 0x00
+;va 0x0026--
+out  s5, 0x00
+
+; different page reads from page table
+; read ptdir(0) in
+; va 0x000040 - ret 02
+in   s6, 0x40
+
+; read pmd(0) in
+; va 0x000243 - ret 80
+in  s7, 0x43
+
+; va 0x005000 - out 02
+out s6, 0x00
+; va 0x006000 - out 80
+out s7, 0x00
+
+; va 0x002301 - ret 70
+in s8, 0x01
+
+
+fault:
+	load sf, 0xff
+trap:
+	jump trap

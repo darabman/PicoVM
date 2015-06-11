@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="pt_walker.cpp" path="/usr/userfs/s/skjm501/w2k/workspace/prbe/PicoVM/platform/hls/pt_walker.cpp"/>
+    <originFiles name="pt_walker.h" path="/usr/userfs/s/skjm501/w2k/workspace/prbe/PicoVM/platform/hls/pt_walker.h"/>
+  </source>
+  <testbench>
+    <originFiles name="pt_walker_tb.cpp" path="/usr/userfs/s/skjm501/w2k/workspace/prbe/PicoVM/platform/hls/pt_walker_tb.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

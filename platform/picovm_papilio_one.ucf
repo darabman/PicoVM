@@ -1,0 +1,54 @@
+# CLOCK & RESET
+NET "clk_i"  LOC = "AF14" | IOSTANDARD = LVCMOS33 ; 
+NET "rst_i"  LOC = "AE4"  | IOSTANDARD = LVCMOS33 ; 
+
+NET "clk_i" TNM_NET = clk_i;
+TIMESPEC TS_clk_i = PERIOD "clk_i" 100 ns HIGH 50%;
+
+# LED BANK A
+NET "pio_A_dat_o(0)"  LOC = "A3" | IOSTANDARD = LVCMOS33 ; 
+NET "pio_A_dat_o(1)"  LOC = "B4" | IOSTANDARD = LVCMOS33 ; 
+NET "pio_A_dat_o(2)"  LOC = "C4" | IOSTANDARD = LVCMOS33 ; 
+NET "pio_A_dat_o(3)"  LOC = "B5" | IOSTANDARD = LVCMOS33 ; 
+NET "pio_A_dat_o(4)"  LOC = "C5" | IOSTANDARD = LVCMOS33 ; 
+NET "pio_A_dat_o(5)"  LOC = "D6" | IOSTANDARD = LVCMOS33 ; 
+NET "pio_A_dat_o(6)"  LOC = "A5" | IOSTANDARD = LVCMOS33 ; 
+NET "pio_A_dat_o(7)"  LOC = "B6" | IOSTANDARD = LVCMOS33 ; 
+
+# SWITCH BANK A
+NET "pio_A_dat_i(0)"  LOC = "C6"  | IOSTANDARD = LVCMOS33 ; 
+NET "pio_A_dat_i(1)"  LOC = "B7"  | IOSTANDARD = LVCMOS33 ; 
+NET "pio_A_dat_i(2)"  LOC = "A6"  | IOSTANDARD = LVCMOS33 ; 
+NET "pio_A_dat_i(3)"  LOC = "B8"  | IOSTANDARD = LVCMOS33 ; 
+NET "pio_A_dat_i(4)"  LOC = "A7"  | IOSTANDARD = LVCMOS33 ; 
+NET "pio_A_dat_i(5)"  LOC = "D10" | IOSTANDARD = LVCMOS33 ; 
+NET "pio_A_dat_i(6)"  LOC = "A8"  | IOSTANDARD = LVCMOS33 ; 
+NET "pio_A_dat_i(7)"  LOC = "B12" | IOSTANDARD = LVCMOS33 ; 
+
+# RS232 BANK A
+#NET "ser_A_dat_o" LOC = "A12"  | IOSTANDARD = LVCMOS33 ; 
+#NET "ser_A_dat_i" LOC = "C10"  | IOSTANDARD = LVCMOS33 ; 
+
+# LED BANK B
+NET "pio_B_dat_o(0)"  LOC = "D13" | IOSTANDARD = LVCMOS33 ; 
+NET "pio_B_dat_o(1)"  LOC = "B15" | IOSTANDARD = LVCMOS33 ; 
+NET "pio_B_dat_o(2)"  LOC = "A14" | IOSTANDARD = LVCMOS33 ; 
+NET "pio_B_dat_o(3)"  LOC = "A15" | IOSTANDARD = LVCMOS33 ; 
+NET "pio_B_dat_o(4)"  LOC = "D17" | IOSTANDARD = LVCMOS33 ; 
+NET "pio_B_dat_o(5)"  LOC = "A19" | IOSTANDARD = LVCMOS33 ; 
+NET "pio_B_dat_o(6)"  LOC = "E18" | IOSTANDARD = LVCMOS33 ; 
+NET "pio_B_dat_o(7)"  LOC = "B20" | IOSTANDARD = LVCMOS33 ; 
+
+# SWITCH BANK B
+NET "pio_B_dat_i(0)"  LOC = "B19" | IOSTANDARD = LVCMOS33 ; 
+NET "pio_B_dat_i(1)"  LOC = "A21" | IOSTANDARD = LVCMOS33 ; 
+NET "pio_B_dat_i(2)"  LOC = "D20" | IOSTANDARD = LVCMOS33 ; 
+NET "pio_B_dat_i(3)"  LOC = "C21" | IOSTANDARD = LVCMOS33 ; 
+NET "pio_B_dat_i(4)"  LOC = "B21" | IOSTANDARD = LVCMOS33 ; 
+NET "pio_B_dat_i(5)"  LOC = "C22" | IOSTANDARD = LVCMOS33 ; 
+NET "pio_B_dat_i(6)"  LOC = "A22" | IOSTANDARD = LVCMOS33 ; 
+NET "pio_B_dat_i(7)"  LOC = "B23" | IOSTANDARD = LVCMOS33 ; 
+
+# RS232 BANK B
+#NET "ser_B_dat_i" LOC = "C23"  | IOSTANDARD = LVCMOS33 ; 
+#NET "ser_B_dat_o" LOC = "A23"  | IOSTANDARD = LVCMOS33 ; 

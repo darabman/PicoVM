@@ -1,0 +1,22 @@
+# Date: Thu Jun 11 15:08:42 2015
+
+SET addpads = false
+SET asysymbol = true
+SET busformat = BusFormatAngleBracketNotRipped
+SET createndf = false
+SET designentry = VHDL
+SET device = xc3s500e
+SET devicefamily = spartan3e
+SET flowvendor = Other
+SET formalverification = false
+SET foundationsym = false
+SET implementationfiletype = Ngc
+SET package = vq100
+SET removerpms = false
+SET simulationfiles = Behavioral
+SET speedgrade = -5
+SET verilogsim = false
+SET vhdlsim = true
+SET workingdirectory = .\tmp\
+
+# CRC: 95bd7142

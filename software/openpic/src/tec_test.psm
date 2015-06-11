@@ -1,0 +1,51 @@
+eint
+;single wb write
+; 0x004040
+load s0, 0xCC
+load s1, 0xDD
+
+;tec -> 0
+
+out s0, 0x00
+in s0, 0x00
+out s1, 0x00
+in s1, 0x00
+
+;tec -> 4
+
+; s0 = 00, s1 = 00
+; 0x4000 = CC, 0x6000 = DD
+
+;advance tec by a few
+
+in s2, 0x41 ; will evict
+in s3, 0x40 ; will evict
+;tec -> 6
+in s4, 0x41
+in s5, 0x41
+;tec -> 24
+
+; s2-5 = 40, 22, 80, C0
+
+load s7, 0xDD
+out s7, 0x00
+load s7, 0x00
+in s7, 0x00
+;s7 = DD, 00, DD
+; 0x8000 = DD
+;tec -> 25
+
+
+
+load s5, 0xDD
+in s5, 0x00
+load s6, 0xDD
+out s6, 0x00
+; s5 = DD, 00, s6 = DD
+; 0x9000 = 00, DD
+;tec -> 26
+
+pfault:
+load sf, 0xff
+trap:
+jump trap
